@@ -1,0 +1,6 @@
+**/logs
+*.log
+mono_crash.*
+.vs
+.mono
+.import
