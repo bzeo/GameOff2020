@@ -4,6 +4,10 @@ extends RigidBody2D
 var starting_position
 var ending_position
 var is_dragging
+var stroke_count
+
+func _ready():
+	stroke_count = 0
 
 func _physics_process(delta):
 	if is_dragging:
@@ -29,6 +33,7 @@ func _input(event):
 		is_dragging = true
 		starting_position = event.position
 	elif event is InputEventMouseButton && event.button_index == 1 && !event.is_pressed() && is_dragging:
+		increase_stroke_count()
 		is_dragging = false
 		ending_position = event.position
 		print(starting_position, ending_position)
@@ -40,4 +45,6 @@ func move():
 	$Particles.emitting = true
 	var distance = (starting_position - ending_position) * 3
 	apply_impulse(Vector2(0, 0), distance) # TODO: clamp this
-	
+
+func increase_stroke_count():
+	stroke_count += 1

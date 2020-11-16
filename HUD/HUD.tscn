@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 12.3083
+margin_top = 12.1129
+margin_right = 68.3083
+margin_bottom = 52.1129
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelPar" type="Label" parent="VBoxContainer"]
+margin_right = 56.0
+margin_bottom = 14.0
+text = "Par: 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentStroke" type="Label" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 56.0
+margin_bottom = 32.0
+text = "Stroke: 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
