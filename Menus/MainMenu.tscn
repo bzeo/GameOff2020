@@ -1,0 +1,150 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Menus/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Menus/Open_Sans_Condensed/OpenSansCondensed-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Menus/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Menus/PlayButtonPressed.png" type="Texture" id=4]
+[ext_resource path="res://Menus/PlayButtonNormal.png" type="Texture" id=5]
+[ext_resource path="res://Menus/OutlineButtonPressed.png" type="Texture" id=6]
+[ext_resource path="res://Menus/OutlineButtonNormal.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 32, 32 )
+margin_left = 4.60905
+margin_right = 4.60905
+margin_top = 5.53086
+margin_bottom = 4.74074
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 32, 32 )
+margin_left = 5.66255
+margin_right = 5.00412
+margin_top = 5.1358
+margin_bottom = 5.39918
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.027451, 0.0196078, 0.0627451, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 71.0
+margin_bottom = 135.0
+custom_fonts/font = SubResource( 1 )
+text = "Moon Golf"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="TextureButton" parent="."]
+margin_left = 491.0
+margin_top = 472.0
+margin_right = 524.0
+margin_bottom = 504.0
+rect_scale = Vector2( 2, 2 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LicensingButton" type="Button" parent="."]
+margin_left = 22.5987
+margin_top = 529.599
+margin_right = 161.599
+margin_bottom = 578.87
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_colors/font_color_hover = Color( 0.215686, 0.215686, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Licenses"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LicensingInformation" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.027451, 0.0196078, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LicensingText" type="Label" parent="LicensingInformation"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -499.5
+margin_top = -281.5
+margin_right = 499.5
+margin_bottom = 281.5
+custom_fonts/font = SubResource( 2 )
+text = "Godot Game Engine:
+https://godotengine.org/license
+This game uses Godot Engine, available under the following license:
+
+Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur. Copyright (c) 2014-2020 Godot Engine contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \\\\\\\"Software\\\\\\\"), 
+to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \\\\\\\"AS IS\\\\\\\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS 
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Portions of this software are copyright © 2020 The FreeType Project (www.freetype.org). All rights reserved.
+
+Font:
+https://fonts.google.com/specimen/Open+Sans+Condensed
+Fonts are licensed under the Apache License, Version 2.0. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="LicensingInformation"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -63.1514
+margin_top = 23.592
+margin_right = -21.1514
+margin_bottom = 43.592
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="LicensingButton" to="." method="_on_LicensingButton_pressed"]
+[connection signal="pressed" from="LicensingInformation/Back" to="." method="_on_Back_pressed"]

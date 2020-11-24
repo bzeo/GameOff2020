@@ -19,6 +19,10 @@ config/name="GameOff2020"
 run/main_scene="res://MainTest.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global/Global.gd"
+
 [input]
 
 mouse_click={

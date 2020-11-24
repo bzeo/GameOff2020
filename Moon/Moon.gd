@@ -1,7 +1,21 @@
 extends Area2D
 
 
+var can_end_round = false
+var body_entered
+
+func _process(delta):
+	if can_end_round && body_entered.sleeping && !body_entered.is_dragging:
+		body_entered.hide()
+		body_entered.queue_free()
+
 func _on_Moon_body_entered(body):
-	if body.name == "Ship" && abs(body.linear_velocity.x) < 150.0 && abs(body.linear_velocity.y) < 150.0:
-		body.hide()
-		body.queue_free()
+	if body.name == "Ship": 
+		body_entered = body
+		can_end_round = true
+
+
+func _on_Moon_body_exited(body):
+	if body.name == "Ship": 
+		body_entered = null
+		can_end_round = false

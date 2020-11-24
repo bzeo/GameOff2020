@@ -1,0 +1,338 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Menus/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menus/OutlineButtonNormal.png" type="Texture" id=2]
+[ext_resource path="res://Levels/LevelSelector.gd" type="Script" id=3]
+[ext_resource path="res://Ship/Rocket.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="DynamicFont" id=4]
+size = 21
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="DynamicFont" id=6]
+size = 21
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=7]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="DynamicFont" id=8]
+size = 21
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=9]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="DynamicFont" id=10]
+size = 21
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=11]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="StreamTexture" id=12]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="StreamTexture" id=13]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="StreamTexture" id=14]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="StreamTexture" id=15]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 151.492, 408.6, -58.1272, 26.5463, 58.1272, -26.5463, 211.908, 209.046, -75.0619, -21.9693, 75.0619, 21.9693, 343.266, 517.532, -76.435, 51.2618, 76.435, -51.2618, 453.57, 338.573, -62.2465, 69.5696, 62.2465, -69.5696, 462.724, 115.676, -48.0579, -6.86542, 48.0579, 6.86542, 668.687, 251.611, -55.8387, 22.8847, 55.8387, -22.8847, 769.38, 155.495, 1.37308, -47.6002, -1.37308, 47.6002, 866.411, 298.754, -6.40772, -40.2771, 6.40772, 40.2771, 742.376, 445.216, 0, 0, 0, 0, 935.523, 514.786 )
+}
+
+[node name="LevelSelector" type="ColorRect"]
+anchor_top = 0.000631714
+anchor_right = 1.0
+anchor_bottom = 1.00063
+color = Color( 0.027451, 0.0196078, 0.0627451, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 150, 408, 158.215, 329.058, 172.776, 267.637, 191.751, 228.5, 215, 211, 231.971, 217.006, 245.961, 247.873, 278.826, 372.229, 301.033, 456.392, 320.574, 495.919, 350, 520, 380.176, 508.577, 410.821, 409.98, 423.923, 373.117, 439.023, 353.576, 455, 342, 473.443, 316.713, 478.773, 284.736, 467.892, 245.875, 450.571, 193.69, 447.24, 156.605, 451.459, 135.731, 465, 117, 486.723, 102.465, 515.369, 106.907, 548.013, 133.555, 626.179, 220.16, 657.49, 243.698, 679, 247, 694.131, 243.787, 741.653, 178.056, 760.75, 160.291, 774, 154, 796.813, 156.649, 821.685, 174.858, 840.56, 205.947, 856.327, 243.254, 866, 304, 855.216, 324.752, 773.719, 399.143, 746.183, 427.568, 744, 444, 757.641, 462.565, 810.715, 485.127, 901.672, 509.82, 934, 517 )
+default_color = Color( 0.121569, 0.027451, 0.388235, 1 )
+
+[node name="Level01" type="TextureButton" parent="."]
+margin_left = 135.935
+margin_top = 389.956
+margin_right = 167.935
+margin_bottom = 421.956
+disabled = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level01"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Level02" type="TextureButton" parent="."]
+margin_left = 199.187
+margin_top = 196.641
+margin_right = 231.187
+margin_bottom = 228.641
+disabled = true
+texture_normal = SubResource( 3 )
+texture_pressed = SubResource( 3 )
+texture_hover = SubResource( 3 )
+texture_disabled = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level02"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="Level03" type="TextureButton" parent="."]
+margin_left = 335.97
+margin_top = 500.647
+margin_right = 367.97
+margin_bottom = 532.647
+disabled = true
+texture_normal = SubResource( 5 )
+texture_pressed = SubResource( 5 )
+texture_hover = SubResource( 5 )
+texture_disabled = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level03"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="Level04" type="TextureButton" parent="."]
+margin_left = 439.15
+margin_top = 324.727
+margin_right = 471.15
+margin_bottom = 356.727
+disabled = true
+texture_normal = SubResource( 7 )
+texture_pressed = SubResource( 7 )
+texture_hover = SubResource( 7 )
+texture_disabled = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level04"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "4"
+align = 1
+valign = 1
+
+[node name="Level05" type="TextureButton" parent="."]
+margin_left = 449.824
+margin_top = 100.577
+margin_right = 481.824
+margin_bottom = 132.577
+disabled = true
+texture_normal = SubResource( 9 )
+texture_pressed = SubResource( 9 )
+texture_hover = SubResource( 9 )
+texture_disabled = SubResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level05"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5"
+align = 1
+valign = 1
+
+[node name="Level06" type="TextureButton" parent="."]
+margin_left = 660.928
+margin_top = 233.011
+margin_right = 692.928
+margin_bottom = 265.011
+disabled = true
+texture_normal = SubResource( 11 )
+texture_pressed = SubResource( 11 )
+texture_hover = SubResource( 11 )
+texture_disabled = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level06"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "6"
+align = 1
+valign = 1
+
+[node name="Level07" type="TextureButton" parent="."]
+margin_left = 756.597
+margin_top = 138.924
+margin_right = 788.597
+margin_bottom = 170.924
+disabled = true
+texture_normal = SubResource( 12 )
+texture_pressed = SubResource( 12 )
+texture_hover = SubResource( 12 )
+texture_disabled = SubResource( 12 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level07"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "7"
+align = 1
+valign = 1
+
+[node name="Level08" type="TextureButton" parent="."]
+margin_left = 851.475
+margin_top = 284.799
+margin_right = 883.475
+margin_bottom = 316.799
+disabled = true
+texture_normal = SubResource( 13 )
+texture_pressed = SubResource( 13 )
+texture_hover = SubResource( 13 )
+texture_disabled = SubResource( 13 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level08"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "8"
+align = 1
+valign = 1
+
+[node name="Level09" type="TextureButton" parent="."]
+margin_left = 731.296
+margin_top = 427.512
+margin_right = 763.296
+margin_bottom = 459.512
+disabled = true
+texture_normal = SubResource( 14 )
+texture_pressed = SubResource( 14 )
+texture_hover = SubResource( 14 )
+texture_disabled = SubResource( 14 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level09"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "9"
+align = 1
+valign = 1
+
+[node name="Level10" type="TextureButton" parent="."]
+margin_left = 917.495
+margin_top = 499.856
+margin_right = 949.495
+margin_bottom = 531.856
+disabled = true
+texture_normal = SubResource( 15 )
+texture_pressed = SubResource( 15 )
+texture_hover = SubResource( 15 )
+texture_disabled = SubResource( 15 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Level10"]
+margin_right = 31.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "10"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 151.492, 408.6 )
+rotation = -1.54555
+cubic_interp = false
+loop = false
+
+[node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
+rotation = 1.5708
+texture = ExtResource( 4 )
