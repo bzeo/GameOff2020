@@ -13,7 +13,7 @@ size = 40
 use_filter = true
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 32, 32 )
 margin_left = 4.60905
@@ -29,13 +29,13 @@ margin_right = 5.00412
 margin_top = 5.1358
 margin_bottom = 5.39918
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 28
 outline_size = 1
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=5]
 size = 15
 use_filter = true
 font_data = ExtResource( 2 )
@@ -77,10 +77,10 @@ margin_left = 22.5987
 margin_top = 529.599
 margin_right = 161.599
 margin_bottom = 578.87
-custom_styles/hover = SubResource( 4 )
+custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
 custom_colors/font_color_hover = Color( 0.215686, 0.215686, 0.215686, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -107,7 +107,7 @@ margin_left = -499.5
 margin_top = -281.5
 margin_right = 499.5
 margin_bottom = 281.5
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 5 )
 text = "Godot Game Engine:
 https://godotengine.org/license
 This game uses Godot Engine, available under the following license:

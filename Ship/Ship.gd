@@ -4,9 +4,10 @@ extends RigidBody2D
 var starting_position
 var ending_position
 var is_dragging
-var stroke_count
+var stroke_count = 0
 
 func _ready():
+	Global.set("ship", self)
 	stroke_count = 0
 
 func _physics_process(delta):

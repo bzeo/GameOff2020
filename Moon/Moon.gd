@@ -6,6 +6,7 @@ var body_entered
 
 func _process(delta):
 	if can_end_round && body_entered.sleeping && !body_entered.is_dragging:
+		Global.end_level()
 		body_entered.hide()
 		body_entered.queue_free()
 
