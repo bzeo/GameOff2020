@@ -4,13 +4,14 @@ extends ColorRect
 var point_unit_offsets = [0, 0.1068, 0.2816, 0.3884, 0.5049, 0.6408, 0.7088, 0.801, 0.8932, 1]
 
 func _ready():
+	$AudioStreamPlayer2D.play()
 	$Path2D/PathFollow2D.unit_offset = point_unit_offsets[Global.current_level]
 	if Global.current_level < 9 && !Global.fresh_start:
 		$PlayButton.hide()
 		Global.increase_level()
 		$Timer.start()
 	elif Global.current_level == 9:
-		print("go to win/lose screen")
+		get_tree().change_scene("res://Menus/EndGameMenu.tscn")
 
 func _process(delta):
 	if $Path2D/PathFollow2D.unit_offset < point_unit_offsets[Global.current_level]:

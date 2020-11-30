@@ -1,6 +1,9 @@
 extends ColorRect
 
 
+func _ready():
+	$AudioStreamPlayer2D.play()
+
 func _on_LicensingButton_pressed():
 	$LicensingInformation.show()
 

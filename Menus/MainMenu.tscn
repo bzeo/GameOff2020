@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/Open_Sans_Condensed/OpenSansCondensed-Light.ttf" type="DynamicFontData" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Moon/Moon.png" type="Texture" id=9]
 [ext_resource path="res://Ship/Rocket.png" type="Texture" id=10]
 [ext_resource path="res://Menus/BouncingArrow.png" type="Texture" id=11]
+[ext_resource path="res://Environment/Background_space.wav" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -326,6 +327,10 @@ __meta__ = {
 position = Vector2( 496.921, 347.015 )
 frames = SubResource( 16 )
 speed_scale = 2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+pitch_scale = 0.5
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="LicensingButton" to="." method="_on_LicensingButton_pressed"]
 [connection signal="pressed" from="Tutorial" to="." method="_on_Tutorial_pressed"]

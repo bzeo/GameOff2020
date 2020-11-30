@@ -41,6 +41,7 @@ func _input(event):
 		move()
 
 func move():
+	$AudioStreamPlayer2D.play()
 	$Particles.emitting = true
 	var distance = (starting_position - ending_position) * 3
 	apply_impulse(Vector2(0, 0), distance) 

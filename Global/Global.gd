@@ -8,6 +8,7 @@ var total_shots = 0
 var current_level = 0
 var level_pars = [3, 3, 4, 4, 2, 6, 2, 3, 4, 5]
 
+
 func increase_level():
 	current_level += 1
 

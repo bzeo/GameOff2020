@@ -6,12 +6,10 @@ var body_entered
 
 func _process(delta):
 	if can_end_round && body_entered.sleeping && !body_entered.is_dragging:
+		$AudioStreamPlayer2D.play()
 		Global.end_level()
 		body_entered.hide()
 		body_entered.queue_free()
-	# TODO: REMOVE THIS
-	if Input.is_action_just_pressed("ui_accept"):
-		Global.end_level()
 
 func _on_Moon_body_entered(body):
 	if body.name == "Ship": 
