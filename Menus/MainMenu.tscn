@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menus/Open_Sans_Condensed/OpenSansCondensed-Light.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://Menus/PlayButtonNormal.png" type="Texture" id=5]
 [ext_resource path="res://Menus/OutlineButtonPressed.png" type="Texture" id=6]
 [ext_resource path="res://Menus/OutlineButtonNormal.png" type="Texture" id=7]
+[ext_resource path="res://Obstacles/Asteroid.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Moon/Moon.png" type="Texture" id=9]
+[ext_resource path="res://Ship/Rocket.png" type="Texture" id=10]
+[ext_resource path="res://Menus/BouncingArrow.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -39,6 +43,52 @@ font_data = ExtResource( 3 )
 size = 15
 use_filter = true
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=10]
+load_path = "res://.import/Rocket.png-67a6fb667fdde41f533e35598bf7296b.stex"
+
+[sub_resource type="StreamTexture" id=11]
+load_path = "res://.import/Moon.png-c12328a8f07ce5a6bd979527de885102.stex"
+
+[sub_resource type="StreamTexture" id=8]
+load_path = "res://.import/OutlineButtonNormal.png-0d4070bdcd1e47bac06414f2b71a2555.stex"
+
+[sub_resource type="StreamTexture" id=9]
+load_path = "res://.import/OutlineButtonPressed.png-6a14d5eabc09de5401ec30087e2ce458.stex"
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 11 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 11 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="MainMenu" type="ColorRect"]
 anchor_right = 1.0
@@ -89,6 +139,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Tutorial" type="Button" parent="."]
+margin_left = 22.5987
+margin_top = 462.167
+margin_right = 161.599
+margin_bottom = 511.439
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_colors/font_color_hover = Color( 0.215686, 0.215686, 0.215686, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Tutorial"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LicensingInformation" type="ColorRect" parent="."]
 visible = false
 anchor_right = 1.0
@@ -134,17 +201,133 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="LicensingInformation"]
+[node name="Back" type="TextureButton" parent="LicensingInformation"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -63.1514
-margin_top = 23.592
-margin_right = -21.1514
-margin_bottom = 43.592
-text = "Back"
+margin_left = -53.0
+margin_top = 24.0
+margin_right = -21.0
+margin_bottom = 56.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="LicensingInformation/Back"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -6.22449
+margin_bottom = 3.77551
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "<"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Asteroid" parent="." instance=ExtResource( 8 )]
+position = Vector2( 33.0886, 30.7346 )
+scale = Vector2( 3, 3 )
+
+[node name="Asteroid2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 833.453, 309.28 )
+scale = Vector2( 3, 3 )
+
+[node name="Asteroid3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 924.745, 101.797 )
+scale = Vector2( 3, 3 )
+
+[node name="Asteroid4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 312.153, 122.027 )
+scale = Vector2( 3, 3 )
+
+[node name="Asteroid5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 117.119, 283.863 )
+scale = Vector2( 3, 3 )
+
+[node name="MoonSprite" type="Sprite" parent="."]
+position = Vector2( 511.445, 267.653 )
+texture = ExtResource( 9 )
+
+[node name="ShipSprite" type="Sprite" parent="."]
+position = Vector2( 769.761, 399.923 )
+rotation = -1.01578
+texture = ExtResource( 10 )
+
+[node name="TutorialInformation" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.027451, 0.0196078, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TutorialInformation"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -475.0
+margin_top = -269.0
+margin_right = 480.0
+margin_bottom = -178.0
+custom_fonts/font = SubResource( 6 )
+text = "Your goal is to land your ship on the moon.
+To achieve this, you want to use the mouse to pull back on the ship, aim the direction you want the ship to travel and let go.
+Try and make it to the moon in as little moves as possible.
+But be careful, there are asteroids out there.
+
+Good Luck and Have Fun!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShipSprite2" type="Sprite" parent="TutorialInformation"]
+position = Vector2( 398.885, 347.015 )
+rotation = 1.5708
+texture = SubResource( 10 )
+
+[node name="MoonSprite2" type="Sprite" parent="TutorialInformation"]
+position = Vector2( 572.133, 348.571 )
+texture = SubResource( 11 )
+
+[node name="BackButton" type="TextureButton" parent="TutorialInformation"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -53.0
+margin_top = 24.0
+margin_right = -21.0
+margin_bottom = 56.0
+texture_normal = SubResource( 8 )
+texture_pressed = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TutorialInformation/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -6.22449
+margin_bottom = 3.77551
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "<"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="AnimatedSprite" parent="TutorialInformation"]
+position = Vector2( 496.921, 347.015 )
+frames = SubResource( 16 )
+speed_scale = 2.0
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="LicensingButton" to="." method="_on_LicensingButton_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="LicensingInformation/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="TutorialInformation/BackButton" to="." method="_on_BackButton_pressed"]

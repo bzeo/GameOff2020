@@ -348,7 +348,6 @@ wait_time = 1.5
 one_shot = true
 
 [node name="PlayButton" type="TextureButton" parent="."]
-visible = false
 margin_left = 491.0
 margin_top = 472.0
 margin_right = 524.0

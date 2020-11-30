@@ -13,7 +13,6 @@ func _ready():
 func _physics_process(delta):
 	if is_dragging:
 		var distance = (starting_position - get_global_mouse_position()) / 3
-		# TODO: have ship look in direction they are going to go
 		$ProgressBar.show()
 		$ProgressBar.value = clamp(abs(distance.y) + abs(distance.x), 0, 100)
 		var styleBox = $ProgressBar.get("custom_styles/fg")
@@ -37,7 +36,6 @@ func _input(event):
 		increase_stroke_count()
 		is_dragging = false
 		ending_position = event.position
-		print(starting_position, ending_position)
 		$ProgressBar.hide()
 		$ProgressBar.value = 0
 		move()
@@ -45,7 +43,7 @@ func _input(event):
 func move():
 	$Particles.emitting = true
 	var distance = (starting_position - ending_position) * 3
-	apply_impulse(Vector2(0, 0), distance) # TODO: clamp this
+	apply_impulse(Vector2(0, 0), distance) 
 
 func increase_stroke_count():
 	stroke_count += 1

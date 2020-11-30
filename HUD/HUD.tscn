@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Menus/Open_Sans_Condensed/OpenSansCondensed-Light.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -15,17 +30,19 @@ __meta__ = {
 }
 
 [node name="LevelPar" type="Label" parent="VBoxContainer"]
-margin_right = 56.0
-margin_bottom = 14.0
+margin_right = 71.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 1 )
 text = "Par: 4"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CurrentStroke" type="Label" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 56.0
-margin_bottom = 32.0
+margin_top = 39.0
+margin_right = 71.0
+margin_bottom = 74.0
+custom_fonts/font = SubResource( 2 )
 text = "Stroke: 3"
 __meta__ = {
 "_edit_use_anchors_": false

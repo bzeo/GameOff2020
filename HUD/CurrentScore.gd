@@ -13,3 +13,5 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func _on_TextureButton_pressed():
 	Global.change_to_level_selector()
+	hide()
+	queue_free()
