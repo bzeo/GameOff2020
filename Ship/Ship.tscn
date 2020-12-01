@@ -8,8 +8,8 @@
 bounce = 0.7
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 11.6354
-height = 40.8289
+radius = 14.9536
+height = 37.9746
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 1 )

@@ -6,7 +6,7 @@
 [ext_resource path="res://Moon/Land_moon.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 17.1237
+radius = 19.8788
 
 [node name="Moon" type="Area2D"]
 z_index = -1
